@@ -1,7 +1,7 @@
 #include "Composition.h"
 #include "DataflowEngineManager.h"
 #include "UbBundleBlock.h"
-#include "UbIOBlock.h"
+//#include "UbIOBlock.h"
 #include "UbLink.h"
 #include "UbLinkController.h"
 
@@ -29,7 +29,7 @@ void Composition::addBlock(QString strBlockName)
 	{
 		if ( std::get<0>(*it) == strBlockName )
 		{
-			UbBundleBlock *block = new UbBundleBlock( 0, std::get<1>(*it), strBlockName );
+            Uber::UbBundleBlock *block = new Uber::UbBundleBlock( 0, std::get<1>(*it), strBlockName );
 			block->setPos(0, 0);
 			m_WorkbenchGraphicsScene->addItem(block);
 			break;

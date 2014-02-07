@@ -18,6 +18,8 @@
 #include "BlockNavigationTreeWidget.h"
 #include "DataflowEngineManager.h"
 #include <QApplication>
+#include <QDrag>
+#include <QMimeData>
 
 BlockNavigationTreeWidget::BlockNavigationTreeWidget(QWidget *parent)
 	: QTreeWidget(parent)
