@@ -17,8 +17,8 @@
 */
 #pragma once
 
-#include <QtGui/QDialog>
-#include <QtGui/QListWidget>
+#include <QDialog>
+#include <QListWidget>
 
 class SettingsDialog : public QDialog 
 {

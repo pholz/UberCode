@@ -18,6 +18,7 @@
 #include "UbGraphicsScene.h"
 #include "BlockNavigationTreeWidget.h"
 #include "DataflowEngineManager.h"
+#include <QMimeData>
 
 namespace Uber {
 	UbGraphicsScene::UbGraphicsScene()

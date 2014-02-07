@@ -1,6 +1,7 @@
 #include "WorkbenchGraphicsScene.h"
 #include "BlockNavigationTreeWidget.h"
 #include "DataflowEngineManager.h"
+#include <QMimeData>
 
 WorkbenchGraphicsScene::WorkbenchGraphicsScene()
 {
@@ -42,7 +43,7 @@ void WorkbenchGraphicsScene::dropEvent(QGraphicsSceneDragDropEvent* event)
 {
 	QString blockName = event->mimeData()->text();
 	event->acceptProposedAction();
-	DataflowEngineManager::getInstance()->getComposition()->addBlock(blockName);
+    DataflowEngineManager::getInstance()->getComposition()->addBlock(blockName, QPointF());
 }
 
 void WorkbenchGraphicsScene::initialize()

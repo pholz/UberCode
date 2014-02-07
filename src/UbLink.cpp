@@ -15,6 +15,7 @@
 	See the License for the specific language governing permissions and
 	limitations under the License.
 */
+#include <QGraphicsScene>
 #include <QPainter>
 #include <iostream>
 #include "UbLink.h"
@@ -24,12 +25,12 @@
 #include "UbImageView.h"
 
 namespace Uber {
-	UbLink::UbLink( QGraphicsItem *parent,  QGraphicsScene *scene )
-		:QGraphicsPathItem(parent, scene),
+    UbLink::UbLink( QGraphicsItem *parent,  QGraphicsScene *scene )
+        :QGraphicsPathItem(parent),
 		m_StartNode( UbNodeRef( new UbNode() ) ),
 		m_EndNode( UbNodeRef( new UbNode() ) )
 	{
-
+        scene->addItem(this);
 	}
 
 	UbLink::~UbLink()

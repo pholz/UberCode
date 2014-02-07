@@ -17,7 +17,7 @@
 */
 #include "MainWindow.h"
 
-#include <windows.h>
+//#include <windows.h>
 
 #include <QApplication>
 #include <QFile>

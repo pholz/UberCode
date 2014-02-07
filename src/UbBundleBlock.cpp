@@ -71,7 +71,7 @@ namespace Uber {
 			setName(m_BlockId);
 		} else
 		{
-			throw std::exception("Cannot find any block instance with the specified Id.");
+            throw std::exception();//"Cannot find any block instance with the specified Id.");
 		}
 		arrangeNodes();
 		setAcceptHoverEvents( true ); 

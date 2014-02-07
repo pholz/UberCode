@@ -28,7 +28,7 @@
 
 #include "UbImageView.h"
 #include "UbPathBlock.h"
-#include "UbRadioButton.h"
+#include "UbRadiobutton.h"
 #include "UbSlider.h"
 #include "UbSpinbox.h"
 
@@ -85,7 +85,7 @@ void MainWindow::open()
 		DataflowEngineManager::getInstance()->getEngine().clearBlockInstances();
 
 		std::string file = fileName.toUtf8().constData();
-		DataflowEngineManager::getInstance()->getEngine().loadConfig( file );
+        DataflowEngineManager::getInstance()->getEngine().loadConfiguration( file );
 		Ubercode::xml::UbXMLReader* xmlLoader = new Ubercode::xml::UbXMLReader(fileName);
 		//Add Blocks
 		QMap<QString, QPoint> data = xmlLoader->getBlockData();
@@ -279,7 +279,7 @@ void MainWindow::save()
 	if (dialog.exec())
 	{
 		fileNames = dialog.selectedFiles();
-		DataflowEngineManager::getInstance()->getEngine().safeConfig(fileNames.at(0).toUtf8().constData());
+        DataflowEngineManager::getInstance()->getEngine().saveConfig(fileNames.at(0).toUtf8().constData());
 		Uber::xml::UbXMLWriter* ubXML = new Uber::xml::UbXMLWriter(fileNames.at(0));
 
 		QList<QGraphicsItem *> items = DataflowEngineManager::getInstance()->getComposition()->getGraphicsScene()->items();

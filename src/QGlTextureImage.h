@@ -1,6 +1,6 @@
 #ifndef QGLTEXTUREIMAGE_H
 #define QGLTEXTUREIMAGE_H
-#include <QIMAGE>
+#include <QImage>
 #include <qgl.h>
 
 namespace _2Real
