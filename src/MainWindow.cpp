@@ -279,7 +279,7 @@ void MainWindow::save()
 	if (dialog.exec())
 	{
 		fileNames = dialog.selectedFiles();
-        DataflowEngineManager::getInstance()->getEngine().saveConfig(fileNames.at(0).toUtf8().constData());
+//        DataflowEngineManager::getInstance()->getEngine().saveConfig(fileNames.at(0).toUtf8().constData());
 		Uber::xml::UbXMLWriter* ubXML = new Uber::xml::UbXMLWriter(fileNames.at(0));
 
 		QList<QGraphicsItem *> items = DataflowEngineManager::getInstance()->getComposition()->getGraphicsScene()->items();
